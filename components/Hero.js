@@ -42,7 +42,6 @@ const Hero = ({
               GAP Service especially <strong>Design and Interior</strong>,
               discover interesting features from us.
             </p>
-            <ButtonPrimary>Get Started</ButtonPrimary>
           </div>
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>

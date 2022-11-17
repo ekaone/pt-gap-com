@@ -1,5 +1,6 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import Image from "next/image";
+import ModalVideo from "react-modal-video";
 import ButtonPrimary from "./misc/ButtonPrimary";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
@@ -25,6 +26,7 @@ const Hero = ({
   ],
 }) => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <div className="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto" id="about">
@@ -42,6 +44,16 @@ const Hero = ({
               GAP Service especially <strong>Design and Interior</strong>,
               discover interesting features from us.
             </p>
+            <ModalVideo
+              channel="youtube"
+              autoplay
+              isOpen={isOpen}
+              videoId="wSJQ4f5tfWQ"
+              onClose={() => setOpen(false)}
+            />
+            <ButtonPrimary onClick={() => setOpen(true)}>
+              Watch video
+            </ButtonPrimary>
           </div>
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>

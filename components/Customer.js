@@ -3,12 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import ButtonPrimary from "./misc/ButtonPrimary";
-import Maps from "../public/assets/HugeGlobal.svg";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
-const Pricing2 = () => {
+const Customer = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
   const listCustomers = [
     {
@@ -55,7 +54,7 @@ const Pricing2 = () => {
   return (
     <div
       className="bg-gradient-to-b from-white-300 to-white-500 w-full py-14"
-      id="pricing"
+      id="customer"
     >
       <div className="max-w-screen-xl  px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
         <div className="flex flex-col w-full my-16">
@@ -73,14 +72,6 @@ const Pricing2 = () => {
               Our Global Customer everywhere to make it easier for you when you
               move locations.
             </motion.p>
-          </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper>
-            <motion.div
-              className="py-12 w-full px-8 mt-16"
-              variants={scrollAnimation}
-            >
-              <Maps className="w-full h-auto" />
-            </motion.div>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper>
             <motion.div
@@ -147,4 +138,4 @@ const Pricing2 = () => {
   );
 };
 
-export default Pricing2;
+export default Customer;
